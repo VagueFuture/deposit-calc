@@ -1,13 +1,13 @@
 CC              = gcc
 CFLAGS          = -Wall -Werror
-EXECUTABLE      = bin/deposit-calc
-SRC_BUILD_DIR   = build/src
+EXECUTABLE      = Bin/deposit-calc
+SRC_BUILD_DIR   = Build
 SRC_DIR         = src/
 
 all: makedir compile
 
 makedir: 
-	mkdir -p bin build/src
+	mkdir -p Bin Build src
 
 compile: $(SRC_BUILD_DIR)/main.o $(SRC_BUILD_DIR)/deposit.o
 	$(CC) $(SRC_BUILD_DIR)/main.o $(SRC_BUILD_DIR)/deposit.o -o $(EXECUTABLE)
@@ -22,4 +22,4 @@ $(SRC_BUILD_DIR)/deposit.o: $(SRC_DIR)/deposit.c
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm -rf build/ bin/
+	rm -rf Build/ Bin/ src
