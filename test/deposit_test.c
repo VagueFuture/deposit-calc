@@ -2,10 +2,10 @@
 #include "ctest.h"
  
  
- CTEST(LessBlockTests, good106)
+ CTEST(LessBlockTests, good)
  {
      const int result = provsrok(20);
-     const int expected = 0;
+     const int expected = 1;
      ASSERT_EQUAL(expected, result);
  }
  
