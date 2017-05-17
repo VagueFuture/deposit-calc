@@ -41,7 +41,7 @@
 ///////////////////////////////////////////
 	 
 	double sravnenie(double a,double b) 
-	{double itog,prc=0;
+	{double prc=0;
 	
 	if (b<100000)
 {///summ<100000

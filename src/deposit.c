@@ -3,25 +3,20 @@
 #include <math.h>
 #include "deposit.h" 
 
-double provsrok(double a)
-	{
-		printf("Vvegite srok vklada \n");
- while(a<0 || a>365) scanf("%lf",&a);
- ///////////////////////////////////////
- 	
- 	return (a);
+double provsrok (double a)
+{
+		
+ while(a<0 || a>365) return(0);
+ 	return (1);
 	}
 	
-		double provsumm(double b)
+	double provsumm (double b)
 	{
- 		   printf("Vvegite summu vklada MIN 10,000p\n");
-     while(b<10000) scanf("%lf",&b);	
- ////////////////////////////////////////
- 	return (b);
+     while(b<10000) return(0);
+ 	return (1);
 	}
-/////////////////////////////////////////
-//////////////////////////////////////////
-///////////////////////////////////////////
+	
+		
 	 
 	double sravnenie(double a,double b) 
 	{
@@ -35,6 +30,7 @@ double provsrok(double a)
 	//printf("%lf \n",prc);
 	b=b-prc;
 	printf("Vash srok %lf < 30 dney vi poluchaete shtraf 10 procentov vasha cymma %lf \n",a,b);
+	return (b);
 	}///srok<30
 	
 	
@@ -44,6 +40,7 @@ double provsrok(double a)
 	//printf("%lf \n",prc);
 	b=b+prc;
 	printf("Vash srok %lf <= 120 dney vi poluchaete 2 procenta vasha cymma %lf \n",a,b);
+	return (b);
 	}///srok<120
 	
 	
@@ -53,6 +50,7 @@ double provsrok(double a)
 	//printf("%lf \n",prc);
 	b=b+prc;
 	printf("Vash srok %lf < 240 dney vi poluchaete 6 procentov vasha cymma %lf \n",a,b);
+	return (b);
 	}///srok<240
 	
 	
@@ -62,6 +60,7 @@ double provsrok(double a)
 	//printf("%lf \n",prc);
 	b=b+prc;
 	printf("Vash srok %lf <= 365 dney vi poluchaete 12 procentov vasha cymma %lf \n",a,b);
+	return (b);
 	}///srok<365
 	
 }///summ<100000
@@ -75,6 +74,7 @@ if (b>=100000)
 	//printf("%lf \n",prc);
 	b=b-prc;
 	printf("Vash srok %lf < 30 dney vi poluchaete shtraf 10 procentov vasha cymma %lf \n",a,b);
+	return (b);
 	}///srok<30
 	
 	
@@ -84,7 +84,7 @@ if (b>=100000)
 	//printf("%lf \n",prc);
 	b=b+prc;
 	printf("Vash srok %lf <= 120 dney vi poluchaete 3 procenta vasha cymma %lf \n",a,b);
-
+return (b);
 	}///srok<120
 	
 	
@@ -94,6 +94,7 @@ if (b>=100000)
 	//printf("%lf \n",prc);
 	b=b+prc;
 	printf("Vash srok %lf < 240 dney vi poluchaete 8 procentov vasha cymma %lf \n",a,b);
+	return (b);
 	}///srok<240
 	
 	
@@ -103,6 +104,7 @@ if (b>=100000)
 	//printf("%lf \n",prc);
 	b=b+prc;
 	printf("Vash srok %lf <= 365 dney vi poluchaete 15 procentov vasha cymma %lf \n",a,b);
+	return (b);
 	}///srok<365
 	
 }///summ>100000
